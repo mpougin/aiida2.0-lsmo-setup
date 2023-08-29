@@ -1,0 +1,8 @@
+label: ddec-2017
+description: chargemol_09_26_2017 precompiled linux/parallel binary from https://sourceforge.net/projects/ddec/files/
+input_plugin: ddec
+on_computer: true
+computer: eiger-mr30
+remote_abs_path: /users/mpougin/src/chargemol_09_26_2017/chargemol_FORTRAN_09_26_2017/compiled_binaries/linux/Chargemol_09_26_2017_linux_parallel
+prepend_text: False
+append_text: False

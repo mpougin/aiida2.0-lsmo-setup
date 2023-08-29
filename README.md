@@ -156,3 +156,53 @@ $ verdi status
  ✔ rabbitmq:    Connected to RabbitMQ v3.10.7 as amqp://guest:guest@127.0.0.1:5672?heartbeat=600
  ⏺ daemon:      The daemon is not running.
 ```
+## Set up Computer and Codes
+
+General instructions for setting up a (remote) computer resource, setting up a code on this computer and submitting calculations through AiiDA can be found on [the `Aiida-HowTo` manual](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/run_codes.html).
+I summarise the important steps here to use the common AiiDA plugins on the servers used by the LSMO-group.
+
+### Set up SSH connections
+
+AiiDA communicates with remote computers via the SSH protocol. To set up an SSH connection for AiiDA you first need to generate an SSH key. You can find more information on [the `AiiDA-HowTo` manual](https://aiida.readthedocs.io/projects/aiida-core/en/latest/howto/ssh.html).
+
+To connect to the CSCS-clusters (eiger and daint) you need to use the `ProxyJump` or `ProxyCommand` feature of SSH using the `ela.cscs` proxy server.
+
+### Computer setup
+
+The configuration of computers happens in two steps: setting up the public metadata associated with the Computer in AiiDA provenance graphs, and configuring private connection details. 
+I collected the `setup.yaml` files for the computers used by the lsmo-team in the `/computer` folder.
+
+> IMPORTANT: When you copy the `.yaml` files make sure to change your username!!!
+
+To create a new computer you can use the information provided in the configurations files:
+
+```
+verdi computer setup --config computer-setup.yml
+```
+
+### Computer connection configuration
+
+The second step configures private connection details. Here, you can use and `configure.yaml` files in the `/computer` folder:
+
+```
+verdi computer configure core.ssh computer --config computer-configure.yaml
+```
+
+After the setup and configuration have been completed, let’s check that everything is working properly:
+
+```
+verdi computer test COMPUTERNAME
+```
+
+After running the test, if everything's working fine, it's time for a victory dance in the office! 💃🕺 (We will take a picture for your graduation.) Nearly there!!!!
+
+### Create a code
+
+Last step, before you can finally run a calculation, you need to define a "code". This will tell AiiDA what code the calculation should execute and how it should be executed. Again you don't have to worry, I provided the necessary information (modules, paths,...) for the commonly used codes for you, check the `/codes` folder. You can then set up the code via the configuration files:
+
+```
+verdi code create core.code.installed --config code.yaml
+```
+
+
+**If you've made it this far without throwing your computer out the window, congratulations! You're officially awesome. 🚀🎉 Remember to hydrate, stretch, and give yourself a well-deserved high-five!**
