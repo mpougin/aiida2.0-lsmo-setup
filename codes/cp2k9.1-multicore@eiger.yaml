@@ -1,0 +1,12 @@
+---
+label: "cp2k-9.1"
+description: "CP2K compiled for eiger multicore"
+input_plugin: "cp2k"
+computer: "eiger-mr30"
+on_computer: true
+remote_abs_path: "/apps/pilatus/UES/jenkins/1.4.0/software/CP2K/9.1-cpeGNU-21.12/bin/cp2k.psmp"
+prepend_text: |
+        module load cray
+        module load cpeGNU/21.12
+        module load CP2K/9.1
+append_text: " "
