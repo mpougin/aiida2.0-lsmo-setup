@@ -1,6 +1,8 @@
 # LSMO AiiDA project setup
 
-(These instructions have been tested for Ubuntu 22.04.3 LTS)
+Welcome to the wild world of setting up the aiida-lsmo plugin! Hold onto your keyboards, because we're about to embark on the epic journey of 'How many LSMO-group members does it take to install a plugin?' Spoiler: Just one... that's you! 🚀
+
+Note: These instructions have been tested for Ubuntu 22.04.3 LTS
 
 ## Install Python and services
 
