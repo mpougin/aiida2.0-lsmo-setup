@@ -1,15 +1,11 @@
 username: CSCSuser
 port: 22
 look_for_keys: True
-key_filename: /home/user/.ssh/cscs-key
+key_filename: /home/lsmo/.ssh/cscs-key
 timeout: 60
 allow_agent: True
-proxy_command: False
-proxy_jump: mpougin@ela.cscs.ch
+proxy_jump: CSCSuser@ela.cscs.ch
 compress: True
-gss_auth: False
-gss_kex: False
-gss_deleg_creds: False
 gss_host: eiger.cscs.ch
 load_system_host_keys: True
 key_policy: RejectPolicy

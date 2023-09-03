@@ -188,13 +188,13 @@ By adding `-n` "non-interactive", the CLI never prompts but simply uses default 
 The second step configures private connection details. Here, you can use and `configure.yaml` files in the `/computer` folder:
 
 ```
-verdi computer configure core.ssh computer -n --config computer-configure.yaml
+verdi computer configure core.ssh COMPUTERlabel -n --config computer-configure.yaml
 ```
 
 After the setup and configuration have been completed, let’s check that everything is working properly:
 
 ```
-verdi computer test COMPUTERNAME
+verdi computer test COMPUTERlabel
 ```
 
 After running the test, if everything's working fine, it's time for a victory dance in the office! 💃🕺 (We will take a picture for your graduation.) Nearly there!!!!

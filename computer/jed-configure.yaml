@@ -1,7 +1,7 @@
 username: GASPARuser
 port: 22
 look_for_keys: True
-key_filename: /home/user/.ssh/id_ed25519_fidis
+key_filename: /home/lsmo/.ssh/id_ed25519_scitas
 timeout: 60
 allow_agent: True
 compress: True
