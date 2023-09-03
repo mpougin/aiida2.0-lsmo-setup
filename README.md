@@ -179,21 +179,22 @@ I collected the `setup.yaml` files for the computers used by the lsmo-team in th
 To create a new computer you can use the information provided in the configurations files:
 
 ```
-verdi computer setup --config computer-setup.yml
+verdi computer setup -n --config computer-setup.yml
 ```
+By adding `-n` "non-interactive", the CLI never prompts but simply uses default values for options that define one.
 
 ### Computer connection configuration
 
 The second step configures private connection details. Here, you can use and `configure.yaml` files in the `/computer` folder:
 
 ```
-verdi computer configure core.ssh computer --config computer-configure.yaml
+verdi computer configure core.ssh COMPUTERlabel -n --config computer-configure.yaml
 ```
 
 After the setup and configuration have been completed, let’s check that everything is working properly:
 
 ```
-verdi computer test COMPUTERNAME
+verdi computer test COMPUTERlabel
 ```
 
 After running the test, if everything's working fine, it's time for a victory dance in the office! 💃🕺 (We will take a picture for your graduation.) Nearly there!!!!
@@ -203,7 +204,7 @@ After running the test, if everything's working fine, it's time for a victory da
 Last step, before you can finally run a calculation, you need to define a "code". This will tell AiiDA what code the calculation should execute and how it should be executed. Again you don't have to worry, I provided the necessary information (modules, paths,...) for the commonly used codes for you, check the `/codes` folder. You can then set up the code via the configuration files:
 
 ```
-verdi code create core.code.installed --config code.yaml
+verdi code create core.code.installed -n --config code.yaml
 ```
 
 

@@ -1,12 +1,11 @@
 ---
 label: "raspa"
 description: "RASPA2 cloned from https://github.com/iRASPA/RASPA2.git"
-input_plugin: "raspa"
+default_calc_job_plugin: "raspa"
 computer: "lsmosrv4"
-on_computer: true
-remote_abs_path: "/usr/local/bin/lsmo-codes/simulate_4467e14_ubu18"
+filepath_executable: "/usr/local/bin/lsmo-codes/simulate_4467e14_ubu18"
 prepend_text: |
   export RASPA_DIR=/usr/local/bin/lsmo-codes/lib/raspa
-  export DYLD_LIBRARY_PATH=/usr/local/bin/lsmo-codes/lib/raspa_4467e14_fidis
-  export LD_LIBRARY_PATH=/usr/local/bin/lsmo-codes/lib/raspa_4467e14_fidis
+  export DYLD_LIBRARY_PATH=/usr/local/bin/lsmo-codes/lib
+  export LD_LIBRARY_PATH=/usr/local/bin/lsmo-codes/lib
 append_text: " "

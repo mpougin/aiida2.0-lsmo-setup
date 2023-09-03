@@ -1,9 +1,9 @@
 ---
 label: "zeopp"
 description: "Zeo++ cloned from https://github.com/mharanczyk/zeoplusplus"
-input_plugin: "zeopp.network"
+default_calc_job_plugin: "zeopp.network"
 computer: "jed"
-on_computer: true
-remote_abs_path: "/work/lsmo/aiida-lsmo-codes/bin/network_46ce745_ubu18"
+filepath_executable: "/work/lsmo/aiida-lsmo-codes/bin/network_46ce745_ubu18"
 prepend_text: " "
 append_text: " "
+
