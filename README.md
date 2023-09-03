@@ -204,7 +204,7 @@ After running the test, if everything's working fine, it's time for a victory da
 Last step, before you can finally run a calculation, you need to define a "code". This will tell AiiDA what code the calculation should execute and how it should be executed. Again you don't have to worry, I provided the necessary information (modules, paths,...) for the commonly used codes for you, check the `/codes` folder. You can then set up the code via the configuration files:
 
 ```
-verdi code create core.code.installed --config code.yaml
+verdi code create core.code.installed -n --config code.yaml
 ```
 
 
